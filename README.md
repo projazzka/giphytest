@@ -4,7 +4,8 @@ This is a small program that retrieves an animated GIF from Giphy, given a text,
 
 # Requirements
 
-uv package manager, python 3.13
+  - uv package manager (https://docs.astral.sh/uv/)
+  - python 3.13 or higher
 
 # Configuration
 
@@ -35,6 +36,6 @@ uv run pytest
 
 # Directory structure
 
-`/giphy/` The GIPHY adapter
-`/tests/` Integration tests
-`/main.py` The main file
+  - `/giphy/` The GIPHY adapter
+  - `/tests/` Integration tests
+  - `/main.py` The main file
