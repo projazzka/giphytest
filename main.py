@@ -3,16 +3,9 @@
 import asyncio
 
 import typer
-from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from giphy.client import GiphyClient, GiphyError
-
-
-class Settings(BaseSettings):
-    giphy_api_key: str
-
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
-
+from settings import Settings
 
 app = typer.Typer()
 settings = Settings()  # type: ignore
