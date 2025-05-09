@@ -2,8 +2,6 @@ import httpx
 
 
 class GiphyError(Exception):
-    """Exception raised for errors in the Giphy API client."""
-
     pass
 
 
@@ -13,18 +11,6 @@ class GiphyClient:
         self.base_url = "https://api.giphy.com/v1/gifs"
 
     async def get_gif(self, query: str) -> str | None:
-        """
-        Search for a GIF using the Giphy API and return its URL.
-
-        Args:
-            query: The search term to find a GIF
-
-        Returns:
-            str | None: The URL of the first GIF found, or None if no GIFs found
-
-        Raises:
-            GiphyError: If there's an error communicating with the Giphy API
-        """
         async with httpx.AsyncClient() as client:
             try:
                 response = await client.get(
