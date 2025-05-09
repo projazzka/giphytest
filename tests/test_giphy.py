@@ -23,7 +23,7 @@ async def test_get_gif_no_response(settings):
     """Test that searching with an impossible query returns None."""
     client = GiphyClient(settings.giphy_api_key)
 
-    # Test with an censored query string
+    # Test with a censored query string
     gif_url = await client.get_gif("nazi")
 
     # Verify we got None back
